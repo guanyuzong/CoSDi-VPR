@@ -36,7 +36,17 @@ general visual-retrieval aggregation framework.
 
 ## Method
 
-![CoSDi architecture](png/2-2.jpg)
+**Overall pipeline.** Given an input image, DINOv2 produces patch tokens that are
+augmented with positional encoding (P.E.). A set of learnable slots `S^(0)` then
+interacts with the tokens `X̃` through `T` iterations of CoSDi, yielding refined
+slots `S^(T)`, which are aggregated into the global descriptor via a Transformer
+encoder (Trans. Enc.) layer.
+
+![VPR pipeline](png/2-1.jpg)
+
+**Inside one CoSDi iteration** — competition → filtering → refocusing:
+
+![CoSDi iteration](png/2-2.jpg)
 
 CoSDi replaces the single-pass aggregation head with an iterative loop. At each
 iteration: (1) **Competition** — slots compete over scene tokens via a softmax
@@ -87,10 +97,10 @@ pip install torch torchvision lightning faiss-gpu numpy pillow scikit-learn tqdm
 
 | Model           | Task | Backbone   | Download |
 |-----------------|------|------------|----------|
-| `CoSDi-VPR.ckpt`  | VPR  | DINOv2-B   | [Releases](https://github.com/guanyuzong/CoSDi-VPR/releases) |
-| `CoSDi-CVGL.ckpt` | CVGL | DINOv2-B   | [Releases](https://github.com/guanyuzong/CoSDi-VPR/releases) |
+| `CoSDi-VPR.ckpt`  | VPR  | DINOv2-B   | [Baidu Pan](https://pan.baidu.com/s/1d7nCkS6S70HXhwMcbh_8aw?pwd=1234) (code: `1234`) |
+| `CoSDi-CVGL.ckpt` | CVGL | DINOv2-B   | [Baidu Pan](https://pan.baidu.com/s/13vPR1qubficL6gYaXDqo1g?pwd=1234) (code: `1234`) |
 
-> Weights are hosted as GitHub Release assets (too large for the repo tree).
+> Weights are hosted on Baidu Pan (extraction code: `1234`).
 
 ---
 
