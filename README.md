@@ -1,7 +1,6 @@
-# CoSDi: Competitive Slot Distillation for Robust Visual Place Recognition
+# Rethinking the aggregation head: Competitive Slot Distillation for Robust Visual Place Recognition
 
-> Rethinking the aggregation head — recasting feature aggregation as an iterative
-> **competition → filtering → refocusing** loop.
+> Recasting feature aggregation as an iterative **competition → filtering → refocusing** loop.
 
 ## Abstract
 
@@ -38,8 +37,8 @@ One CoSDi iteration:
 ## Visualization
 
 <p align="center">
-  <img src="png/5_1.jpg" width="49%"/>
-  <img src="png/5_2.jpg" width="49%"/>
+  <img src="png/5_1.jpg" width="52%"/>
+  <img src="png/5_2.jpg" width="47%"/>
 </p>
 
 **(a) Left** — across iterations, CoSDi focuses on discriminative structures and
