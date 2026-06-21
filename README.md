@@ -132,8 +132,8 @@ python eval_sues.py \
 
 ### VPR (8 benchmarks)
 
-<table width="100%">
-<thead><tr><th>Dataset</th><th>R@1</th><th>R@5</th><th>R@10</th><th>R@15</th></tr></thead>
+<table>
+<thead><tr><th width="220">Dataset</th><th width="135">R@1</th><th width="135">R@5</th><th width="135">R@10</th><th width="135">R@15</th></tr></thead>
 <tbody>
 <tr><td align="center">MSLS-val</td><td align="center">94.19</td><td align="center">96.62</td><td align="center">96.76</td><td align="center">97.30</td></tr>
 <tr><td align="center">Nordland</td><td align="center">84.96</td><td align="center">94.13</td><td align="center">96.16</td><td align="center">97.03</td></tr>
@@ -153,8 +153,8 @@ python eval_sues.py \
 
 ### CVGL — University-1652
 
-<table width="100%">
-<thead><tr><th>Direction</th><th>R@1</th><th>R@5</th><th>R@10</th><th>mAP</th></tr></thead>
+<table>
+<thead><tr><th width="280">Direction</th><th width="120">R@1</th><th width="120">R@5</th><th width="120">R@10</th><th width="120">mAP</th></tr></thead>
 <tbody>
 <tr><td align="center">Drone → Satellite (d2s)</td><td align="center">94.55</td><td align="center">99.12</td><td align="center">99.42</td><td align="center">96.65</td></tr>
 <tr><td align="center">Satellite → Drone (s2d)</td><td align="center">97.43</td><td align="center">98.72</td><td align="center">99.00</td><td align="center">93.92</td></tr>
@@ -163,8 +163,8 @@ python eval_sues.py \
 
 ### CVGL — SUES-200 (cross-dataset, trained on University-1652)
 
-<table width="100%">
-<thead><tr><th>Height</th><th>Direction</th><th>R@1</th><th>R@5</th><th>R@10</th><th>AP</th></tr></thead>
+<table>
+<thead><tr><th width="120">Height</th><th width="140">Direction</th><th width="125">R@1</th><th width="125">R@5</th><th width="125">R@10</th><th width="125">AP</th></tr></thead>
 <tbody>
 <tr><td align="center">150</td><td align="center">d2s</td><td align="center">90.07</td><td align="center">97.28</td><td align="center">98.45</td><td align="center">93.28</td></tr>
 <tr><td align="center">150</td><td align="center">s2d</td><td align="center">96.25</td><td align="center">97.50</td><td align="center">97.50</td><td align="center">88.43</td></tr>
