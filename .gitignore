@@ -1,0 +1,8 @@
+*.ckpt
+*.pth
+*.zip
+data/
+__pycache__/
+*.pyc
+*.pyo
+logs/
