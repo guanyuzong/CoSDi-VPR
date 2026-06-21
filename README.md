@@ -129,7 +129,7 @@ python eval_sues.py \
 <table>
 <thead><tr><th width="220">Dataset</th><th width="135">R@1</th><th width="135">R@5</th><th width="135">R@10</th><th width="135">R@15</th></tr></thead>
 <tbody>
-<tr><td align="center">MSLS-val</td><td align="center">94.19</td><td align="center">96.62</td><td align="center">96.76</td><td align="center">97.30</td></tr>
+<tr><td align="center">MSLS-val</td><td align="center">94.19</td><td align="center">97.03</td><td align="center">97.16</td><td align="center">97.30</td></tr>
 <tr><td align="center">Nordland</td><td align="center">84.96</td><td align="center">94.13</td><td align="center">96.16</td><td align="center">97.03</td></tr>
 <tr><td align="center">Tokyo24/7</td><td align="center">97.46</td><td align="center">99.05</td><td align="center">99.37</td><td align="center">99.37</td></tr>
 <tr><td align="center">AmsterTime</td><td align="center">62.06</td><td align="center">82.29</td><td align="center">86.35</td><td align="center">88.30</td></tr>
