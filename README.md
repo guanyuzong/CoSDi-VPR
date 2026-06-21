@@ -24,11 +24,11 @@ DINOv2 produces patch tokens (+ positional encoding). Learnable slots interact w
 through `T` iterations of CoSDi, then aggregate into the global descriptor via a Transformer
 encoder layer.
 
-<p align="center"><img src="png/2-1.jpg" width="90%"/></p>
+<p align="center"><img src="png/2-1.jpg" width="95%"/></p>
 
 One CoSDi iteration:
 
-<p align="center"><img src="png/2-2.jpg" width="90%"/></p>
+<p align="center"><img src="png/2-2.jpg" width="95%"/></p>
 
 1. **Competition** — slots compete over tokens via softmax along the slot dimension (zero-sum); each token is claimed by its most relevant slot.
 2. **Filtering** — the per-token max claim gates a token mask `M` that suppresses unreliable regions.
