@@ -1,86 +1,52 @@
 # CoSDi: Competitive Slot Distillation for Robust Visual Place Recognition
 
-### Rethinking the Aggregation Head: Competitive Slot Distillation for Robust Visual Place Recognition
-
-> Code: https://github.com/guanyuzong/CoSDi-VPR
-
----
+> Rethinking the aggregation head — recasting feature aggregation as an iterative
+> **competition → filtering → refocusing** loop.
 
 ## Abstract
 
-Visual Place Recognition (VPR) localizes a query image by retrieving the
-best-matching place from a large-scale geo-tagged database. Its key challenge
-lies in aggregating **stable structural cues** from distractor-saturated scenes
-into a global descriptor. Existing aggregation methods follow a **single-pass**
-paradigm that struggles to disentangle informative cues from distractors, and
-largely offload this burden onto auxiliary external modules.
+Visual Place Recognition (VPR) localizes a query image by retrieving the best-matching
+place from a large geo-tagged database. The key challenge is aggregating **stable structural
+cues** from distractor-saturated scenes into a global descriptor.
 
-Inspired by natural selection, we recast aggregation as an **iterative
-structure-distillation** process. We propose **Competitive Slot Distillation
-(CoSDi)**, which uses only **20 learnable prototypes (slots)** that interact with
-scene features to form an affinity matrix, and imposes a **zero-sum assignment
-along the slot dimension** so that slots specialize in complementary structures.
-Because the competition itself reveals which regions are most strongly absorbed
-by the slots, this affinity matrix is **directly reused as an intrinsic filtering
-signal** to suppress unreliable regions **without any auxiliary model** (e.g.,
-segmentation), forming a self-reinforcing **competition → filtering → refocusing**
-loop.
+We propose **Competitive Slot Distillation (CoSDi)**, which recasts aggregation as an
+**iterative structure-distillation** process. Only **20 learnable slots** compete over scene
+features via a **zero-sum assignment**, so they specialize in complementary structures. The
+resulting affinity matrix is **directly reused to filter unreliable regions — no auxiliary
+model (e.g., segmentation) needed**, forming a self-reinforcing **competition → filtering →
+refocusing** loop.
 
-On eight VPR benchmarks CoSDi outperforms state-of-the-art methods (**+4.3% R@1
-on Nordland**). Without any task-specific modification, CoSDi transfers directly
-to **Cross-View Geo-Localization (CVGL)**, achieving **+6.09% R@1 over MEAN** on
-SUES-200 Drone→Satellite cross-dataset generalization — validating CoSDi as a
-general visual-retrieval aggregation framework.
-
----
+**Results:** SOTA on 8 VPR benchmarks (**+4.3% R@1 on Nordland**), and transfers directly to
+Cross-View Geo-Localization (**+6.09% R@1 over MEAN** on SUES-200 Drone→Satellite).
 
 ## Method
 
-**Overall pipeline.** Given an input image, DINOv2 produces patch tokens that are
-augmented with positional encoding (P.E.). A set of learnable slots `S^(0)` then
-interacts with the tokens `X̃` through `T` iterations of CoSDi, yielding refined
-slots `S^(T)`, which are aggregated into the global descriptor via a Transformer
-encoder (Trans. Enc.) layer.
+DINOv2 produces patch tokens (+ positional encoding). Learnable slots interact with them
+through `T` iterations of CoSDi, then aggregate into the global descriptor via a Transformer
+encoder layer.
 
 ![VPR pipeline](png/2-1.jpg)
 
-**Inside one CoSDi iteration** — competition → filtering → refocusing:
+One CoSDi iteration:
 
 ![CoSDi iteration](png/2-2.jpg)
 
-CoSDi replaces the single-pass aggregation head with an iterative loop. At each
-iteration: (1) **Competition** — slots compete over scene tokens via a softmax
-along the slot dimension (zero-sum assignment), so each token is claimed by its
-most relevant slot; (2) **Filtering** — the per-token max claim drives a light
-gate that produces a token mask `M`, suppressing unreliable regions; (3)
-**Refocusing** — the cleaned feature pool and updated slots feed the next
-iteration. The final slots are projected and concatenated into the global
-descriptor.
-
----
+1. **Competition** — slots compete over tokens via softmax along the slot dimension (zero-sum); each token is claimed by its most relevant slot.
+2. **Filtering** — the per-token max claim gates a token mask `M` that suppresses unreliable regions.
+3. **Refocusing** — the cleaned features and updated slots feed the next iteration.
 
 ## Visualization
 
-![Attention evolution across iterations](png/5_1.jpg)
+![Attention evolution](png/5_1.jpg)
 
-**(a) Evolution of descriptor-attention heatmaps across CoSDi iterations.**
-Starting from DINOv2 (raw) and DINOv2-FT (fine-tuned) features, CoSDi
-progressively focuses on discriminative structures (red circles) and suppresses
-distractors (pedestrians, sky, snow) from Iter-1 to Iter-3. After the final
-iteration, the query and its correctly-retrieved database image converge to
-consistent regions.
+**(a)** Across iterations, CoSDi focuses on discriminative structures and suppresses
+distractors (pedestrians, sky, snow). Query and its retrieved match converge to consistent regions.
 
-![Individual slot attentions](png/5_2.jpg)
+![Slot attentions](png/5_2.jpg)
 
-**(b) Individual slot attentions.** The aggregated descriptor attention
-(*Des. Atten.*) is the union of all slot attentions, while individual slots
-specialize in complementary cues (buildings, road surfaces, vertical landmarks),
-consistent with the zero-sum competition. The **same slot attends to
-corresponding structures across a query and its top-1 match** (slot-level
-structural alignment), and Iter-1 vs Iter-3 shows slots refining toward more
-place-discriminative regions.
+**(b)** Individual slots specialize in complementary cues (buildings, road, landmarks), and the
+**same slot aligns to corresponding structures across a query and its top-1 match**.
 
----
 
 ## Installation
 
