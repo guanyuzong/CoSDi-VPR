@@ -168,13 +168,3 @@ python eval_sues.py \
 | 250 | s2d | 98.75 | 100.00 | 100.00 | 97.30 |
 | 300 | d2s | 98.62 | 99.77 | 99.92 | 99.15 |
 | 300 | s2d | 98.75 | 100.00 | 100.00 | 98.10 |
-
----
-
-## Acknowledgements
-
-This codebase builds upon [Bag-of-Queries (BoQ)](https://github.com/amaralibey/Bag-of-Queries),
-[gsv-cities](https://github.com/amaralibey/gsv-cities), and the evaluation
-pipeline of [EDTformer](https://github.com/Tong-Jin01/EDTformer). We thank the
-authors of University-1652, SUES-200, and the VPR-datasets-downloader for the
-benchmarks.
