@@ -132,38 +132,47 @@ python eval_sues.py \
 
 ### VPR (8 benchmarks)
 
-| Dataset | R@1 | R@5 | R@10 | R@15 |
-|---|---|---|---|---|
-| MSLS-val        | 94.19 | 96.62 | 96.76 | 97.30 |
-| Nordland        | 84.96 | 94.13 | 96.16 | 97.03 |
-| Tokyo24/7       | 97.46 | 99.05 | 99.37 | 99.37 |
-| AmsterTime      | 62.06 | 82.29 | 86.35 | 88.30 |
-| SPED            | 91.76 | 96.21 | 96.87 | 97.20 |
-| Baidu           | 70.77 | 83.38 | 88.22 | 90.36 |
-| SVOX-overcast   | 98.28 | 99.31 | 99.43 | 99.54 |
-| SVOX-night      | 97.57 | 99.39 | 99.51 | 99.51 |
-| SVOX-sun        | 98.01 | 99.18 | 99.30 | 99.53 |
-| SVOX-rain       | 98.61 | 99.47 | 99.68 | 99.79 |
-| SVOX-snow       | 99.43 | 99.66 | 99.77 | 99.77 |
-| Pitts30k-test   | 93.21 | 96.89 | 97.98 | 98.34 |
-| Pitts250k-test  | 96.04 | 98.66 | 99.46 | 99.65 |
+<table width="100%">
+<thead><tr><th>Dataset</th><th>R@1</th><th>R@5</th><th>R@10</th><th>R@15</th></tr></thead>
+<tbody>
+<tr><td align="center">MSLS-val</td><td align="center">94.19</td><td align="center">96.62</td><td align="center">96.76</td><td align="center">97.30</td></tr>
+<tr><td align="center">Nordland</td><td align="center">84.96</td><td align="center">94.13</td><td align="center">96.16</td><td align="center">97.03</td></tr>
+<tr><td align="center">Tokyo24/7</td><td align="center">97.46</td><td align="center">99.05</td><td align="center">99.37</td><td align="center">99.37</td></tr>
+<tr><td align="center">AmsterTime</td><td align="center">62.06</td><td align="center">82.29</td><td align="center">86.35</td><td align="center">88.30</td></tr>
+<tr><td align="center">SPED</td><td align="center">91.76</td><td align="center">96.21</td><td align="center">96.87</td><td align="center">97.20</td></tr>
+<tr><td align="center">Baidu</td><td align="center">70.77</td><td align="center">83.38</td><td align="center">88.22</td><td align="center">90.36</td></tr>
+<tr><td align="center">SVOX-overcast</td><td align="center">98.28</td><td align="center">99.31</td><td align="center">99.43</td><td align="center">99.54</td></tr>
+<tr><td align="center">SVOX-night</td><td align="center">97.57</td><td align="center">99.39</td><td align="center">99.51</td><td align="center">99.51</td></tr>
+<tr><td align="center">SVOX-sun</td><td align="center">98.01</td><td align="center">99.18</td><td align="center">99.30</td><td align="center">99.53</td></tr>
+<tr><td align="center">SVOX-rain</td><td align="center">98.61</td><td align="center">99.47</td><td align="center">99.68</td><td align="center">99.79</td></tr>
+<tr><td align="center">SVOX-snow</td><td align="center">99.43</td><td align="center">99.66</td><td align="center">99.77</td><td align="center">99.77</td></tr>
+<tr><td align="center">Pitts30k-test</td><td align="center">93.21</td><td align="center">96.89</td><td align="center">97.98</td><td align="center">98.34</td></tr>
+<tr><td align="center">Pitts250k-test</td><td align="center">96.04</td><td align="center">98.66</td><td align="center">99.46</td><td align="center">99.65</td></tr>
+</tbody>
+</table>
 
 ### CVGL — University-1652
 
-| Direction | R@1 | R@5 | R@10 | mAP |
-|---|---|---|---|---|
-| Drone → Satellite (d2s) | 94.55 | 99.12 | 99.42 | 96.65 |
-| Satellite → Drone (s2d) | 97.43 | 98.72 | 99.00 | 93.92 |
+<table width="100%">
+<thead><tr><th>Direction</th><th>R@1</th><th>R@5</th><th>R@10</th><th>mAP</th></tr></thead>
+<tbody>
+<tr><td align="center">Drone → Satellite (d2s)</td><td align="center">94.55</td><td align="center">99.12</td><td align="center">99.42</td><td align="center">96.65</td></tr>
+<tr><td align="center">Satellite → Drone (s2d)</td><td align="center">97.43</td><td align="center">98.72</td><td align="center">99.00</td><td align="center">93.92</td></tr>
+</tbody>
+</table>
 
 ### CVGL — SUES-200 (cross-dataset, trained on University-1652)
 
-| Height | Direction | R@1 | R@5 | R@10 | AP |
-|---|---|---|---|---|---|
-| 150 | d2s | 90.07 | 97.28 | 98.45 | 93.28 |
-| 150 | s2d | 96.25 | 97.50 | 97.50 | 88.43 |
-| 200 | d2s | 95.55 | 98.83 | 99.37 | 97.01 |
-| 200 | s2d | 98.75 | 98.75 | 98.75 | 94.77 |
-| 250 | d2s | 97.68 | 99.62 | 99.77 | 98.51 |
-| 250 | s2d | 98.75 | 100.00 | 100.00 | 97.30 |
-| 300 | d2s | 98.62 | 99.77 | 99.92 | 99.15 |
-| 300 | s2d | 98.75 | 100.00 | 100.00 | 98.10 |
+<table width="100%">
+<thead><tr><th>Height</th><th>Direction</th><th>R@1</th><th>R@5</th><th>R@10</th><th>AP</th></tr></thead>
+<tbody>
+<tr><td align="center">150</td><td align="center">d2s</td><td align="center">90.07</td><td align="center">97.28</td><td align="center">98.45</td><td align="center">93.28</td></tr>
+<tr><td align="center">150</td><td align="center">s2d</td><td align="center">96.25</td><td align="center">97.50</td><td align="center">97.50</td><td align="center">88.43</td></tr>
+<tr><td align="center">200</td><td align="center">d2s</td><td align="center">95.55</td><td align="center">98.83</td><td align="center">99.37</td><td align="center">97.01</td></tr>
+<tr><td align="center">200</td><td align="center">s2d</td><td align="center">98.75</td><td align="center">98.75</td><td align="center">98.75</td><td align="center">94.77</td></tr>
+<tr><td align="center">250</td><td align="center">d2s</td><td align="center">97.68</td><td align="center">99.62</td><td align="center">99.77</td><td align="center">98.51</td></tr>
+<tr><td align="center">250</td><td align="center">s2d</td><td align="center">98.75</td><td align="center">100.00</td><td align="center">100.00</td><td align="center">97.30</td></tr>
+<tr><td align="center">300</td><td align="center">d2s</td><td align="center">98.62</td><td align="center">99.77</td><td align="center">99.92</td><td align="center">99.15</td></tr>
+<tr><td align="center">300</td><td align="center">s2d</td><td align="center">98.75</td><td align="center">100.00</td><td align="center">100.00</td><td align="center">98.10</td></tr>
+</tbody>
+</table>
