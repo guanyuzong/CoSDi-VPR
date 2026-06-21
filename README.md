@@ -1,4 +1,4 @@
-# Rethinking the aggregation head: Competitive Slot Distillation for Robust Visual Place Recognition
+# Rethinking the Aggregation Head: Competitive Slot Distillation for Robust Visual Place Recognition
 
 > Recasting feature aggregation as an iterative **competition → filtering → refocusing** loop.
 
