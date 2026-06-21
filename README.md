@@ -25,11 +25,11 @@ DINOv2 produces patch tokens (+ positional encoding). Learnable slots interact w
 through `T` iterations of CoSDi, then aggregate into the global descriptor via a Transformer
 encoder layer.
 
-![VPR pipeline](png/2-1.jpg)
+<p align="center"><img src="png/2-1.jpg" width="90%"/></p>
 
 One CoSDi iteration:
 
-![CoSDi iteration](png/2-2.jpg)
+<p align="center"><img src="png/2-2.jpg" width="90%"/></p>
 
 1. **Competition** — slots compete over tokens via softmax along the slot dimension (zero-sum); each token is claimed by its most relevant slot.
 2. **Filtering** — the per-token max claim gates a token mask `M` that suppresses unreliable regions.
@@ -37,15 +37,16 @@ One CoSDi iteration:
 
 ## Visualization
 
-![Attention evolution](png/5_1.jpg)
+<p align="center">
+  <img src="png/5_1.jpg" width="49%"/>
+  <img src="png/5_2.jpg" width="49%"/>
+</p>
 
-**(a)** Across iterations, CoSDi focuses on discriminative structures and suppresses
-distractors (pedestrians, sky, snow). Query and its retrieved match converge to consistent regions.
-
-![Slot attentions](png/5_2.jpg)
-
-**(b)** Individual slots specialize in complementary cues (buildings, road, landmarks), and the
-**same slot aligns to corresponding structures across a query and its top-1 match**.
+**(a) Left** — across iterations, CoSDi focuses on discriminative structures and
+suppresses distractors (pedestrians, sky, snow); the query and its retrieved match
+converge to consistent regions. **(b) Right** — individual slots specialize in
+complementary cues (buildings, road, landmarks), and the **same slot aligns to
+corresponding structures across a query and its top-1 match**.
 
 
 ## Installation
