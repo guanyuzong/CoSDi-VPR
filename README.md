@@ -27,12 +27,11 @@ encoder layer.
 <p align="center"><img src="png/2-1.jpg" width="99%"/></p>
 
 One CoSDi iteration:
-
-<p align="center"><img src="png/2-2.jpg" width="99%"/></p>
-
 1. **Competition** — slots compete over tokens via softmax along the slot dimension (zero-sum); each token is claimed by its most relevant slot.
 2. **Filtering** — the per-token max claim gates a token mask `M` that suppresses unreliable regions.
 3. **Refocusing** — the cleaned features and updated slots feed the next iteration.
+   
+<p align="center"><img src="png/2-2.jpg" width="99%"/></p>
 
 ## Visualization
 
