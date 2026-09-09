@@ -129,8 +129,10 @@ The **same CoSDi network** is reused; only the data/task differ.
 **Train** on SUES-200:
 ```bash
 python train_sues.py \
-    --train_path /path/to/University-Release/train \
-    --test_path  /path/to/University-Release/test
+    --altitude xxx
+    --train_path /path/to/SUES-200-512x512-V2/ \
+    --train_size 336 --val_size 378 \
+    --epochs 16 --milestones 8 12 14 
 ```
 
 
