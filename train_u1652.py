@@ -29,7 +29,7 @@ class HyperParams:
         self.channel_proj: int = 512
         self.num_queries: int = 20
         self.num_layers: int = 1
-        self.output_dim: int = 6144
+        self.output_dim: int = 5120
         self.use_pos_embed: bool = False     # rotation augmentation -> no abs pos prior
 
         # Data paths (EDIT THESE)
