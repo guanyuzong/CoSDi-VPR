@@ -18,7 +18,7 @@ class HyperParams:
         self.channel_proj: int = 512
         self.num_queries: int = 20                    # 不变
         self.num_layers: int = 1
-        self.output_dim: int = 6144                   # 24*256
+        self.output_dim: int = 5120                  # 24*256
 
         self.gsv_cities_path: str = "/home/ZONG/data/GSVCities"
         self.cities: str | list = "all"
