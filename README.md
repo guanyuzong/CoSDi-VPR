@@ -57,6 +57,7 @@ pip install torch torchvision lightning faiss-gpu numpy pillow scikit-learn tqdm
 | Model           | Task | Backbone   | Download |
 |-----------------|------|------------|----------|
 | `CoSDi-VPR.ckpt`  | VPR  | DINOv2-B   | [Baidu Pan](https://pan.baidu.com/s/1d7nCkS6S70HXhwMcbh_8aw?pwd=1234) (code: `1234`) |
+| `CoSDi-CVGL.ckpt` | CVGL-CrossDomain | DINOv2-B   | [Baidu Pan](https://pan.baidu.com/s/13vPR1qubficL6gYaXDqo1g?pwd=1234) (code: `1234`) |
 | `CoSDi-CVGL.ckpt` | CVGL | DINOv2-B   | [Baidu Pan](https://pan.baidu.com/s/13vPR1qubficL6gYaXDqo1g?pwd=1234) (code: `1234`) |
 
 > Weights are hosted on Baidu Pan (extraction code: `1234`).
