@@ -59,9 +59,9 @@ pip install torch torchvision lightning faiss-gpu numpy pillow scikit-learn tqdm
 | `CoSDi-VPR.ckpt`  | VPR  | DINOv2-B   | [Baidu Pan](https://pan.baidu.com/s/1d7nCkS6S70HXhwMcbh_8aw?pwd=1234) (code: `1234`) |
 | `CoSDi-CVGL.ckpt` | CVGL-CrossDomain | DINOv2-B   | [Baidu Pan](https://pan.baidu.com/s/1BeJ3BW7yeXYgOa8b8wIXmQ?pwd=1234) (code: `1234`) |
 | `CoSDi-SUES200_h150.ckpt` | CVGL-InDomain-h150 | DINOv2-B   | [Baidu Pan](https://pan.baidu.com/s/1hqqwDLj4vkMGJKzFe8iY5g?pwd=1234) (code: `1234`) |
-| `CoSDi-SUES200_h200.ckpt` | CVGL-InDomain-h200 | DINOv2-B   | [Baidu Pan](https://pan.baidu.com/s/1hqqwDLj4vkMGJKzFe8iY5g?pwd=1234) (code: `1234`) |
-| `CoSDi-SUES200_h250.ckpt` | CVGL-InDomain-h250 | DINOv2-B   | [Baidu Pan](https://pan.baidu.com/s/13vPR1qubficL6gYaXDqo1g?pwd=1234) (code: `1234`) |
-| `CoSDi-SUES200_h300.ckpt` | CVGL-InDomain-h300 | DINOv2-B   | [Baidu Pan](https://pan.baidu.com/s/13vPR1qubficL6gYaXDqo1g?pwd=1234) (code: `1234`) |
+| `CoSDi-SUES200_h200.ckpt` | CVGL-InDomain-h200 | DINOv2-B   | [Baidu Pan](https://pan.baidu.com/s/1XGdNBwU2yAcXbLAZXx27gg?pwd=1234) (code: `1234`) |
+| `CoSDi-SUES200_h250.ckpt` | CVGL-InDomain-h250 | DINOv2-B   | [Baidu Pan](https://pan.baidu.com/s/1zpWbEAK5n95ZkgjNlOZuBQ?pwd=1234) (code: `1234`) |
+| `CoSDi-SUES200_h300.ckpt` | CVGL-InDomain-h300 | DINOv2-B   | [Baidu Pan](https://pan.baidu.com/s/10Qn87KpNfb0OqUdCBdsKDA?pwd=1234) (code: `1234`) |
 > Weights are hosted on Baidu Pan (extraction code: `1234`).
 
 ---
