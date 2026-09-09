@@ -55,7 +55,7 @@ class HyperParams:
 
         # Optionally initialize from a VPR-pretrained checkpoint
         self.pretrained_ckpt: str | None = \
-            "epoch[43]_R@1[0.9419]_R@5[0.9662].ckpt"
+            "CoSDi-VPR.ckpt"
 
         self.silent: bool = False
         self.compile: bool = False
