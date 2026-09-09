@@ -24,7 +24,7 @@ class HyperParams:
         self.cities: str | list = "all"
         self.val_sets: dict = {
             "pitts30k-val": "/home/ZONG/data/pitts30k-val",
-            "msls-val":     "//home/ZONG/data/msls-val",
+            "msls-val":     "/home/ZONG/data/msls-val",
         }
 
         self.batch_size: int = 200
