@@ -98,7 +98,7 @@ python eval_all_cosdi.py \
 
 ---
 
-## CVGL — Training & Testing
+## CVGL — Training & Testing (Cross-Domain)
 
 The **same CoSDi network** is reused; only the data/task differ.
 
@@ -106,7 +106,6 @@ The **same CoSDi network** is reused; only the data/task differ.
 ```bash
 python train_u1652.py \
     --train_path /path/to/University-Release/train \
-    --test_path  /path/to/University-Release/test
 ```
 
 **Test on University-1652** (drone↔satellite, both directions):
@@ -123,7 +122,26 @@ python eval_sues.py \
     --test_path /path/to/SUES-200-512x512-V2/SUES-200-512x512
 ```
 
----
+## CVGL — Training & Testing (In-Domain)
+
+The **same CoSDi network** is reused; only the data/task differ.
+
+**Train** on SUES-200:
+```bash
+python train_sues.py \
+    --train_path /path/to/University-Release/train \
+    --test_path  /path/to/University-Release/test
+```
+
+
+**Test on SUES-200** (4 heights × both directions, cross-dataset generalization):
+```bash
+python eval_sues.py \
+  --ckpt sues200_indomain/cosdi_sues200_hxxx.ckpt \
+  --test_path /path/to/SUES-200-512x512-V2/SUES-200-512x512 \
+  --img_size 378 \
+  --heights xxx
+```
 
 ## Results
 
